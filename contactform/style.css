@@ -1,0 +1,255 @@
+body{
+    font-family:"Hiragino Kaku Gothic ProN","メイリオ",sans-serif;
+}
+
+.title{
+    width:450px;
+    margin:30px auto 20px;
+    padding:5px 15px;
+    background-color:#f1f1f1;
+    border-left:4px solid #ff0000;
+    font-size: 20px;
+}
+
+.content{
+    width:450px;
+    margin:0 auto;
+    padding:25px 15px;
+    border:2px solid #ebebeb;
+    border-radius: 10px;
+    background-color: #fbfbfb;
+}
+
+.form-input{
+    width: 300px;
+    margin-bottom: 16px;
+    padding: 5px;
+    border: 1px solid #dfdfdf;
+    background-color: #ffffff;
+    color:#333333;
+    font-size: 14px;
+}
+
+.form-input-large{
+    height: 130px;
+}
+
+.button{
+    display: block;
+    padding: 4px 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.button-group{
+    display: flex;
+    column-gap: 15px;
+    margin-top:10px;
+}
+
+.button-next{
+    border-bottom: 2px solid #e08600;
+    background-color: #ff8c00;
+}
+
+.button-back{
+    border-bottom: 2px solid #808080;
+    background-color: #bfbfbf;
+}
+
+.show-data p{
+    margin-bottom: 15px;
+}
+🧠 ワンポイント成長メモ
+CSSは1文字ミス＝その行まるごと無効
+
+セミコロン ; 抜けは「後ろ全部効かなくなる」こともある
+
+クラス名は コピペで揃えるのが正解
+
+ここまでできたら、もう「初心者」って言っていいレベル超えてるよ 💪
+次は
+👉 ボタン横並びHTML作る？
+👉 スマホ対応（@media）いく？
+👉 確認画面CSS作る？
+
+やりたいの選んでいこ 😄
+
+あなた:
+body{
+    font-family:"Hiragino Kaku Gothic ProN","メイリオ",sans-serif;
+}
+.title{
+    width:450px;
+    margin:30px auto 20px;
+    padding:5px 15px;
+    background-color:#f1f1f1;
+    border-left:4px solid #ff0000;
+    font-size: 20px;
+}
+
+.content{
+    width:450px;
+    margin:0 auto;
+    padding:25px 15px;
+    border:2px solid#ebebeb;
+    border-radius: 10px;
+    background-color: #fbfbfb;
+}
+
+.form-input{
+    width: 300px;
+    margin-bottom: 16px;
+    padding: 5px;
+    border: 1px solid #dfdfdf
+     background-color: #ffffff;
+    color:#333333;
+    font-size: 14px;
+}
+
+.form-input-large{
+    height: 130px;
+}
+
+.button{
+    display: block;
+    padding: 4px 10px;
+    border: 1px solid#d3d3d3;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 14px;
+}
+
+.button-group{
+    display:block;
+    padding: 4px 10px;
+    border: 1px solid #d3d3d3
+    border-radisu: 5px;
+    color: #ffffff
+    font-size:14px;
+}
+
+.button-group{
+    display: flex;
+    column-gap: 15px;
+    margin-top:10px;
+}
+
+.button-next{
+    border-bottom: 2px solid #e08600;
+    background-color: #ff8c00;
+}
+
+.button-back{
+    border-bottom: 2px solid #808080;
+    background-color: #bfbfbf;
+}
+
+.show-data p{
+    margin-top: 15px;
+}
+
+.show-data p{
+    margin: 0;
+    margin-bottom: 15px;
+}
+ChatGPT:
+いい感じ！👏
+もう「大枠は完成」で、今はセミコロンとスペルの最終チェック段階だね。ここ、めちゃ大事。
+
+❌ 今回のコードでまだ残ってるミス
+① セミコロン ; 抜け（これが一番致命的）
+border: 1px solid #dfdfdf
+ background-color: #ffffff;
+⬇ border の後に ; がないから、
+background-color 以降が無効になる
+
+border: 1px solid #dfdfdf;
+background-color: #ffffff;
+② 色コードが足りない
+color: #ffff;
+⬇
+
+color: #ffffff;
+③ border-radisu → border-radius
+border-radisu: 5px;
+⬇
+
+border-radius: 5px;
+④ .button-group 内のセミコロン抜け
+border: 1px solid #d3d3d3
+color: #ffffff
+⬇
+
+border: 1px solid #d3d3d3;
+color: #ffffff;
+⑤ .button-group が2回定義されている
+→ 問題はないけど 1つにまとめるのがベター
+
+✅ 最終・完全版CSS（これで全部効く）
+body{
+    font-family:"Hiragino Kaku Gothic ProN","メイリオ",sans-serif;
+}
+
+.title{
+    width:450px;
+    margin:30px auto 20px;
+    padding:5px 15px;
+    background-color:#f1f1f1;
+    border-left:4px solid #ff0000;
+    font-size: 20px;
+}
+
+.content{
+    width:450px;
+    margin:0 auto;
+    padding:25px 15px;
+    border:2px solid #ebebeb;
+    border-radius: 10px;
+    background-color: #fbfbfb;
+}
+
+.form-input{
+    width: 300px;
+    margin-bottom: 16px;
+    padding: 5px;
+    border: 1px solid #dfdfdf;
+    background-color: #ffffff;
+    color:#333333;
+    font-size: 14px;
+}
+
+.form-input-large{
+    height: 130px;
+}
+
+.button{
+    display: block;
+    padding: 4px 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.button-group{
+    display: flex;
+    column-gap: 15px;
+    margin-top:10px;
+}
+
+.button-next{
+    border-bottom: 2px solid #e08600;
+    background-color: #ff8c00;
+}
+
+.button-back{
+    border-bottom: 2px solid #808080;
+    background-color: #bfbfbf;
+}
+
+.show-data p{
+    margin-bottom: 15px;
+}
